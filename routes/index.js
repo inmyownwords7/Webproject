@@ -8,15 +8,17 @@ const router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-
+//TODO
 router.get('/login', (req, res) => {
   res.render('login', { title: 'Login', user: req.user });
 });
-
+//TODO
 router.post('/login', passport.authenticate('local', {
   successRedirect: '/',
   failureRedirect: '/login',
   failureFlash: true
+}, function(){
+
 }));
 
 router.get('/logout', (req, res) => {

@@ -5,6 +5,7 @@
  */
 
 const app = require('../app');
+const logger = require('../routes/logger')
 const debug = require('debug')('webproject:server');
 const http = require('http');
 
@@ -28,7 +29,8 @@ const server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
-
+logger.on('error', onError)
+logger.on('listening', onListening)
 /**
  * Normalize a port into a number, string, or false.
  */
