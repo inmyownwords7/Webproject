@@ -1,0 +1,18 @@
+form(action="/submit", method="post")
+    div(class="imgcontainer")
+        img(src="img_avatar2.png", alt="Avatar", class="avatar")
+    div(class="container")
+        label(for="uname")
+            b Username
+        input#uname(type="text", placeholder="Enter Username", name="uname", required)
+        label(for="psw")
+            b Password
+        input#psw(type="password", placeholder="Enter Password", name="psw", required)
+        button(type="submit") Login
+        label
+            input(type="checkbox", checked="checked", name="remember")
+            | Remember me
+    div(class="container", style="background-color:#f1f1f1")
+        button(type="button", class="cancelbtn") Cancel
+        span(class="psw") Forgot
+            a(href="#")  password?
